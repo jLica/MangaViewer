@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            >
+
+            <!--
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/menu"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/navMenu"
+                android:layout_centerVertical="true"
+                />
+                -->
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:id="@+id/episode_back"
+                android:src="@drawable/back"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:id="@+id/content_back"
+                android:src="@drawable/back"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text= "@string/app_name"
+                android:fontFamily="@font/font_family"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:id="@+id/main_title"
+
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/episode_back"/>
+            <!--toEndof="navMenu"-->
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/symbols"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                android:id="@+id/content_listBtn"/>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/star_white"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"
+                android:id="@+id/bookmark_star"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameMain"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottomnav"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_bottomnav"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:id="@+id/bottomnav"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
