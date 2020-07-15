@@ -142,43 +142,6 @@ class ContentFragment(val title : String, val eptitle : String, val epLink : Str
         }
     }
 
-    /*private fun changeTitle(t : String) : String {
-        var tmp = t
-        while(tmp.contains("/")) {
-            tmp = tmp.replace("/", "쀍")
-        }
-        while(tmp.contains("?")) {
-            tmp = tmp.replace("?", "뿕")
-        }
-        while(tmp.contains("*")) {
-            tmp = tmp.replace("*", "뽉")
-        }
-        while(tmp.contains("<")) {
-            tmp = tmp.replace("<", "뻙")
-        }
-        while(tmp.contains(">")) {
-            tmp = tmp.replace(">", "빩")
-        }
-        while(tmp.contains(":")) {
-            tmp = tmp.replace(":", "뽥")
-        }
-        while(tmp.contains("|")) {
-            tmp = tmp.replace("|", "쀩")
-        }
-        while(tmp.contains("\"")) {
-            tmp = tmp.replace("\"", "꽑")
-        }
-        while(tmp.contains("\\")) {
-            tmp = tmp.replace("\\", "꿝")
-        }
-        while(tmp.contains("%")) {
-            tmp = tmp.replace("%", "꿹")
-        }
-        if(tmp[tmp.length - 1] == '.') {
-            tmp = tmp.substring(0, tmp.length - 1) + "낅"
-        }
-        return tmp
-    }*/
     private fun changeTitle(t : String) : String {
         var tmp = t
         while(tmp.contains("쀍")) {

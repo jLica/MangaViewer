@@ -74,10 +74,12 @@ class MainAdapter(val list : ArrayList<Updates>, val dialog : AlertDialog, val f
             arrayList.add(titleImage1)
             arrayList.add(titleImage2)
             arrayList.add(titleImage3)
+
             val arrayImage = ArrayList<ImageView>()
             arrayImage.add(holder.imageView1)
             arrayImage.add(holder.imageView2)
             arrayImage.add(holder.imageView3)
+
             val task = ImageTask(arrayList, pa.context, 0, arrayImage, position)
             task.execute()
 
@@ -109,7 +111,7 @@ class MainAdapter(val list : ArrayList<Updates>, val dialog : AlertDialog, val f
     inner class ImageTask(val arrayLink : ArrayList<String>, val context : Context, val code : Int, val arrayImage : ArrayList<ImageView>, val index : Int) : AsyncTask<Void, Void, Drawable>() {
 
         override fun doInBackground(vararg params: Void?): Drawable {
-            val s : FutureTarget<Drawable> = Glide.with(context).load(arrayLink[code]).submit()
+            val s : FutureTarget<Drawable> = Glide.with(context).load(arrayLink[code]).override(250).submit()
             val tmp : Drawable = s.get()
             return tmp
         }

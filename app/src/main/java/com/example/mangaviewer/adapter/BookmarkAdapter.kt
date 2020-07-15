@@ -108,7 +108,7 @@ class BookmarkAdapter(val list : ArrayList<Searched>, val dialog : AlertDialog, 
     inner class ImageTask(val link : String, val context : Context, val image : ImageView) : AsyncTask<Void, Void, Drawable>() {
 
         override fun doInBackground(vararg params: Void?): Drawable {
-            val s : FutureTarget<Drawable> = Glide.with(context).load(link).submit()
+            val s : FutureTarget<Drawable> = Glide.with(context).load(link).override(250).submit()
             val tmp : Drawable = s.get()
             return tmp
         }
